@@ -7,7 +7,6 @@ import Features from '~/components/widgets/Features.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import Content from '~/components/widgets/Content.astro';
-import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
@@ -22,73 +21,72 @@ const metadata = {
   <!-- Hero Widget ******************* -->
 
   <Hero
-  actions={[
-    {
-      variant: 'primary',
-      text: 'Pedir Demo Gratis',
-      href: 'https://wa.me/527298619743',
-      target: '_blank',
-      icon: 'tabler:brand-whatsapp',
-    },
-    { text: 'Ver Módulos', href: '#features' },
-  ]}
->
-  <Fragment slot="title">
-    Control absoluto para tu <span class="text-accent dark:text-white highlight">Restaurante o Bar</span> en Hidalgo
-  </Fragment>
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Cotizar mi Software',
+        href: 'https://wa.me/527298619743',
+        target: '_blank',
+        icon: 'tabler:brand-whatsapp',
+      },
+      { text: 'Ver Sistemas', href: '#features' },
+    ]}
+  >
+    <Fragment slot="title">
+      Tecnología y Automatización para <span class="text-accent dark:text-white highlight">Negocios y Empresas</span> en Hidalgo
+    </Fragment>
 
-  <Fragment slot="subtitle">
-    Deja de perder dinero por comandas mal cobradas, cuentas hechas a mano y fuga de inventario. <span class="font-semibold">VJC POS</span> es el software de Punto de Venta ágil, sin mensualidades forzosas e instalado presencialmente en tu barra.
-  </Fragment>
-</Hero>
+    <Fragment slot="subtitle">
+      Puntos de Venta para abarrotes, restaurantes y barberías; control biométrico para gimnasios y <span class="font-semibold">desarrollo de software a la medida</span>. Sin rentas mensuales y con soporte técnico local.
+    </Fragment>
+  </Hero>
 
   <!-- Note Widget ******************* -->
 
-  <Note title="Philosophy:" description="Simplicity, Best Practices and High Performance" />
-
+  <Note title="El sello VJC:" description="No rentas el software, lo adquieres. Soluciones de uso rudo creadas por desarrolladores de la región." />
   <!-- Features Widget *************** -->
 
   <Features
     id="features"
-    tagline="Features"
-    title="What you get with AstroWind"
-    subtitle="One of the most professional and comprehensive templates currently on the market. Most starred & forked Astro theme in 2022, 2023, 2024 and 2025."
+    tagline="Nuestras Soluciones"
+    title="Un ecosistema de software diseñado para tu industria"
+    subtitle="Elige el sistema optimizado para tu giro comercial o pídenos un desarrollo programado a tu medida."
     items={[
       {
-        title: 'Astro + Tailwind CSS Integration',
+        title: 'POS: Abarrotes y Retail',
         description:
-          'A seamless integration between two great frameworks that offer high productivity, performance and versatility. Now powered by Tailwind CSS v4.',
-        icon: 'tabler:brand-tailwind',
+          'Soporta miles de productos. Escaneo ultrarrápido por código de barras, control de stock, alertas de inventario bajo y corte de caja a prueba de robos.',
+        icon: 'tabler:shopping-cart',
       },
       {
-        title: 'Ready-to-use Components',
+        title: 'POS: Restaurantes y Bares',
         description:
-          'Widgets made with Tailwind CSS v4 ready to be used in Marketing Websites, SaaS, Blogs, Personal Profiles, Small Business...',
-        icon: 'tabler:components',
+          'Control de mesas abiertas, comandas impresas directo en cocina/barra, división de cuentas, gestión de propinas y merma de ingredientes.',
+        icon: 'tabler:coffee',
       },
       {
-        title: 'Best Practices',
+        title: 'POS: Barberías y Estéticas',
         description:
-          'Creating secure, efficient, and user-friendly websites that deliver exceptional experiences and lasting value.',
-        icon: 'tabler:list-check',
+          'Registro de servicios, agenda de citas, base de datos de clientes frecuentes y cálculo automático de comisiones por barbero o estilista.',
+        icon: 'tabler:scissors',
       },
       {
-        title: 'Excellent Page Speed',
+        title: 'Sistema GYM (Acceso Biométrico)',
         description:
-          'Having a good page speed impacts organic search ranking, improves user experience (UI/UX) and increase conversion rates.',
-        icon: 'tabler:rocket',
+          'Control de socios mediante huella digital o reconocimiento facial. Alertas de pago, bloqueo de morosos e historial de asistencias.',
+        icon: 'tabler:fingerprint',
       },
       {
-        title: 'Search Engine Optimization (SEO)',
+        title: 'Fábrica de Software a la Medida',
         description:
-          "SEO lies in its ability to enhance a website's visibility, driving organic traffic and enabling it to reach a wider audience.",
-        icon: 'tabler:arrows-right-left',
+          '¿Tu empresa tiene un proceso administrativo complejo? Diseñamos bases de datos, software a medida y automatizaciones desde cero.',
+        icon: 'tabler:code',
       },
       {
-        title: 'Open to new ideas and contributions',
+        title: 'Licencia Vitalicia + Soporte Local',
         description:
-          'Embracing a culture that is open to new ideas and contributions is integral fostering innovation, collaboration, and a dynamic user experience.',
-        icon: 'tabler:bulb',
+          'Sin pagar mensualidades forzosas. Vamos a tu local en Sahagún y todo Hidalgo a instalar el sistema y capacitar a tu personal presencialmente.',
+        icon: 'tabler:shield-check',
       },
     ]}
   />
@@ -97,33 +95,33 @@ const metadata = {
 
   <Content
     isReversed
-    tagline="Inside template"
-    title="AstroWind's Blueprint: Fun Meets Functionality!"
+    tagline="Control de Accesos Inteligente"
+    title="Sistema GYM: Automatización y Seguridad Biométrica"
     items={[
       {
-        title: 'Built on top of Astro v6',
+        title: 'Acceso por Huella o Rostro',
         description:
-          'Benefiting from the performance and developer-friendly features of this modern static site generator.',
+          'Integración nativa con lectores biométricos y reconocimiento facial para validar la entrada de socios en menos de un segundo.',
       },
       {
-        title: 'Styled using Tailwind CSS v4',
+        title: 'Bloqueo Automático de Morosos',
         description:
-          'Facilitating rapid design and consistent styling with this highly popular utility-first CSS framework.',
+          'El sistema detecta instantáneamente si la membresía de un usuario ha vencido, denegando el paso en el acceso físico de forma automatizada.',
       },
       {
-        title: 'Cross-browser compatibility',
+        title: 'Métricas e Historial de Asistencias',
         description:
-          'Ensure your website looks and functions consistently across various web browsers, delivering a seamless experience to all users.',
+          'Genera reportes detallados y gráficas de flujo de usuarios para conocer las horas pico de tu club y optimizar tus entrenadores.',
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Colorful Image',
+      src: 'https://images.unsplash.com/photo-1517838277536-f5f99be501cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Control de acceso en Gimnasio con Software Biométrico',
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Building on modern foundations</h3>
-      Gain a competitive advantage by incorporating industry leading practices
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Moderniza la administración de tu club</h3>
+      Elimina por completo las credenciales impresas falsificables y el acceso no autorizado con tecnología de validación de identidad en tiempo real.
     </Fragment>
 
     <Fragment slot="bg">
@@ -137,31 +135,26 @@ const metadata = {
     isAfterContent
     items={[
       {
-        title: 'High level of customization',
-        description: `Tailor the template effortlessly to match your brand's identity and requirements, making your website distinct and saving you time.`,
+        title: 'Hardware 100% Compatible',
+        description: `Conecta lectores de código de barras, impresoras térmicas de tickets, cajones de dinero automáticos y básculas electrónicas de forma totalmente nativa.`,
       },
       {
-        title: 'Multiple layout possibilities',
+        title: 'Reportes de Ventas y Productos Estrella',
         description:
-          'Explore various layout options to find the structure that best presents your content, enhancing user engagement and navigation.',
+          'Monitorea tus márgenes de ganancia exactos, analiza cuáles son tus productos más vendidos y detecta fugas de inventario al instante.',
       },
       {
-        title: 'Fully responsive design',
+        title: 'Usuarios, Roles y Permisos Seguros',
         description:
-          "Ensure your website's optimal performance on various devices and screen sizes, providing a consistent and enjoyable user experience.",
-      },
-      {
-        title: 'Integration of media',
-        description:
-          'Seamlessly incorporate images, videos, and multimedia elements that enhance your content and engage visitors effectively.',
+          'Protege tu información administrativa creando perfiles independientes para cajeros, empleados y supervisores con restricciones de cancelaciones.',
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1600132806370-bf17e65e942f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2194&q=80',
-      alt: 'Blueprint Image',
+      src: 'https://images.unsplash.com/photo-1556742044-3c52d6e88c62?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Punto de Venta comercial en mostrador',
     }}
   >
-    <Fragment slot="content">Ensure your online presence truly represents you.</Fragment>
+    <Fragment slot="content">Tecnología de uso rudo para el comercio local</Fragment>
 
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
@@ -175,31 +168,27 @@ const metadata = {
     isAfterContent
     items={[
       {
-        title: 'Enhanced user engagement',
+        title: 'Desarrollo a la Medida de tus Procesos',
         description:
-          'Captivate your audience with interactive elements, intuitive navigation, and visually appealing layouts, encouraging longer visits.',
+          'No adaptes tu empresa a un programa genérico; nosotros construimos la base de datos y la interfaz exactamente como tu operación lo requiere.',
       },
       {
-        title: 'Continuous improvement',
+        title: 'Automatización de Tareas Repetitivas',
         description:
-          'Ensure your website stays aligned with the latest trends and technologies through regular updates and enhancements.',
+          'Eliminamos cuellos de botella administrativos conectando sucursales, generando reportes financieros en un clic y optimizando flujos de trabajo.',
       },
       {
-        title: 'Time and resource efficiency',
+        title: 'Tecnología Moderna, Segura y Escalable',
         description:
-          'Skip the time-consuming process of building a website from scratch and launch your online presence sooner with AstroWind.',
-      },
-      {
-        title: 'Community support',
-        description: `Join the growing AstroWind community for insights, resources, and assistance, ensuring you're never alone on your web development journey.`,
+          'Desarrollamos con lenguajes de última generación. Tu infraestructura estará preparada para crecer y soportar grandes volúmenes de información.',
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1611462985358-60d3498e0364?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Astronauts Image',
+      src: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Código de programación y desarrollo de software',
     }}
   >
-    <Fragment slot="content">Designed to foster growth and success.</Fragment>
+    <Fragment slot="content">Fábrica de Software y Automatización</Fragment>
 
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
@@ -209,93 +198,73 @@ const metadata = {
   <!-- Steps Widget ****************** -->
 
   <Steps
-    title="Get your dream website up and running in no time with AstroWind."
+    title="Tu nuevo sistema implementado y operando en 3 pasos simples:"
     items={[
       {
-        title: 'Step 1: <span class="font-medium">Download</span>',
+        title: 'Paso 1: <span class="font-medium">Solicita tu Cotización o Demo</span>',
         description:
-          "Kickstart with GitHub! Either fork the AstroWind template or simply click 'Use this template'. Your canvas awaits, ready for your digital masterpiece. In just a few clicks, you've already set the foundation.",
-        icon: 'tabler:package',
+          'Contáctanos vía WhatsApp. Platicamos sobre las necesidades operativas de tu negocio y te mostramos el software funcionando en tiempo real.',
+        icon: 'tabler:calendar',
       },
       {
-        title: 'Step 2: <span class="font-medium">Add content</span>',
+        title: 'Paso 2: <span class="font-medium">Instalación Local y Hardware</span>',
         description:
-          "Pour your vision into it. Add images, text, and all that jazz to breathe life into your digital space. Remember, it's the content that tells your story, so make it captivating.",
-        icon: 'tabler:letter-case',
+          'Acudimos presencialmente a tu establecimiento en Ciudad Sahagún o cualquier municipio de Hidalgo para instalar el sistema y configurar tus periféricos.',
+        icon: 'tabler:settings',
       },
       {
-        title: 'Step 3: <span class="font-medium">Customize styles</span>',
+        title: 'Paso 3: <span class="font-medium">Capacitación Exprés</span>',
         description:
-          'Give it your personal touch. Tailor colors, fonts, and layouts until it feels just right. Your unique flair, amplified by AstroWind! Precision in design ensures a seamless user experience.',
-        icon: 'tabler:paint',
+          'Entrenamos a tus cajeros, recepcionistas o administradores en menos de 45 minutos. La interfaz es tan intuitiva que la dominarán el mismo día.',
+        icon: 'tabler:users',
       },
       {
-        title: 'Ready!',
+        title: '¡Listo para cobrar y administrar!',
         icon: 'tabler:check',
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
-      alt: 'Steps image',
+      src: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1000&q=80',
+      alt: 'Instalación y configuración de VJC POS en sitio',
     }}
   />
 
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="Most used widgets"
-    subtitle="Provides frequently used components for building websites using Tailwind CSS v4"
-    tagline="Components"
+    title="Periféricos y Hardware 100% Compatibles"
+    subtitle="Conecta los equipos de tu mostrador por USB o Bluetooth sin configuraciones complejas"
+    tagline="Escalabilidad Garantizada"
     items={[
       {
-        title: 'Headers',
-        description: "Ever tried driving without GPS? Boom! That's why websites need headers for direction.",
-        icon: 'flat-color-icons:template',
+        title: 'Impresoras Térmicas',
+        description: 'Impresión de tickets de venta, cortes de caja y comandas directas a cocina por USB, Bluetooth o Red local.',
+        icon: 'tabler:printer',
       },
       {
-        title: 'Heros',
-        description:
-          "Picture a superhero landing – epic, right? That's the job of a Hero section, making grand entrances!",
-        icon: 'flat-color-icons:gallery',
+        title: 'Lectores de Código de Barras',
+        description: 'Escaneo instantáneo con pistolas láser u omnidireccionales para agilizar el cobro en mini-supers y retail.',
+        icon: 'tabler:barcode',
       },
       {
-        title: 'Features',
-        description:
-          'Where websites strut their stuff and show off superpowers. No holding back on the bragging rights here!',
-        icon: 'flat-color-icons:approval',
+        title: 'Cajones de Dinero',
+        description: 'Apertura automática de la gaveta al registrar un pago en efectivo o al autorizar un retiro de valores.',
+        icon: 'tabler:shield-lock',
       },
       {
-        title: 'Content',
-        description:
-          "Dive into the meat and potatoes of a site; without it, you'd just be window shopping. Content is king.",
-        icon: 'flat-color-icons:document',
+        title: 'Computadoras y Laptops',
+        description: 'Funciona de forma fluida en cualquier equipo con Windows 10 u 11. No requieres comprar terminales costosas.',
+        icon: 'tabler:device-laptop',
       },
       {
-        title: 'Call-to-Action',
-        description:
-          'That enthusiastic friend who\'s always urging, "Do it! Do it!"? Yeah, that\'s this button nudging you towards adventure.',
-        icon: 'flat-color-icons:advertising',
+        title: 'Bases de Datos Locales',
+        description: 'Respaldos automáticos en tu propio disco duro. Tu información está protegida y no depende de servidores externos.',
+        icon: 'tabler:database',
       },
       {
-        title: 'Pricing',
-        description: 'Behold the dessert menu of the website world. Tempting choices await, can you resist?',
-        icon: 'flat-color-icons:currency-exchange',
-      },
-      {
-        title: 'Testimonial',
-        description: 'Step into the gossip corner! Here, other visitors spill the beans and share the juicy details.',
-        icon: 'flat-color-icons:voice-presentation',
-      },
-      {
-        title: 'Contact',
-        description:
-          'Like a digital mailbox, but faster! Drop a line, ask a question, or send a virtual high-five. Ding! Message in.',
-        icon: 'flat-color-icons:business-contact',
-      },
-      {
-        title: 'Footers',
-        description: "The footer's like the credits of a movie but sprinkled with easter eggs. Time to hunt!",
-        icon: 'flat-color-icons:database',
+        title: 'Lectores Biométricos',
+        description: 'Acceso seguro de empleados o socios de gimnasios mediante huella digital para autorizar entradas o descuentos.',
+        icon: 'tabler:fingerprint',
       },
     ]}
   >
@@ -304,53 +273,44 @@ const metadata = {
     </Fragment>
   </Features2>
 
-  <!-- HighlightedPosts Widget ******* -->
-
-  <BlogLatestPosts
-    title="Find out more content in our Blog"
-    information={`The blog is used to display AstroWind documentation.
-                        Each new article will be an important step that you will need to know to be an expert in creating a website using Astro v6 + Tailwind CSS v4.
-                        Astro is a very interesting technology. Thanks.
-                `}
-  />
 
   <!-- FAQs Widget ******************* -->
 
   <FAQs
-    title="Frequently Asked Questions"
-    subtitle="Dive into the following questions to gain insights into the powerful features that AstroWind offers and how it can elevate your web development journey."
-    tagline="FAQs"
+    title="Preguntas Frecuentes"
+    subtitle="Resolvemos las dudas más comunes de los dueños de negocios en Hidalgo"
+    tagline="Dudas Resueltas"
     classes={{ container: 'max-w-6xl' }}
     items={[
       {
-        title: 'Why AstroWind?',
+        title: '¿Tengo que pagar una renta mensual o anual por el software?',
         description:
-          "Michael Knight a young loner on a crusade to champion the cause of the innocent. The helpless. The powerless in a world of criminals who operate above the law. Here he comes Here comes Speed Racer. He's a demon on wheels.",
+          '¡No! A diferencia de otros sistemas que te amarran a una mensualidad de por vida, en VJC realizas un pago único por tu licencia y el software es tuyo para siempre.',
       },
       {
-        title: 'What do I need to start?',
+        title: '¿Qué pasa si cambio de computadora o se daña mi equipo?',
         description:
-          'Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds. Many say exploration is part of our destiny, but it’s actually our duty to future generations.',
+          'Tu inversión está protegida. Si renuevas tu mostrador o tu máquina sufre un percance, nosotros nos encargamos de respaldar tu información y reactivar tu licencia en el nuevo equipo.',
       },
       {
-        title: 'How to install the Astro + Tailwind CSS template?',
+        title: '¿Qué computadora o laptop necesito para que funcione?',
         description:
-          "Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows.",
+          'Nuestros sistemas están optimizados para ser sumamente ligeros. Funcionan de forma fluida en cualquier equipo con Windows (10 u 11) que ya tengas a la mano en tu negocio.',
       },
       {
-        title: "What's something that you don't understand?",
+        title: '¿Ofrecen soporte técnico si tengo algún problema?',
         description:
-          "A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear. I didn't even know we were calling him Big Bear.",
+          'Sí, contamos con soporte directo vía WhatsApp y asistencia presencial en Ciudad Sahagún y municipios cercanos. Si requieres apoyo, hablas directamente con los ingenieros que lo desarrollaron.',
       },
       {
-        title: 'What is something that you would like to try again?',
+        title: '¿Puedo importar mi lista de precios y productos desde Excel?',
         description:
-          "A business big enough that it could be listed on the NASDAQ goes belly up. Disappears! It ceases to exist without me. No, you clearly don't know who you're talking to, so let me clue you in.",
+          '¡Claro! Para que no tengas que capturar tu inventario a mano uno por uno, podemos hacer una carga masiva de todos tus productos, códigos de barras y existencias desde una hoja de cálculo.',
       },
       {
-        title: 'If you could only ask one question to each person you meet, what would that question be?',
+        title: '¿Pueden hacerle modificaciones a la medida de mi empresa?',
         description:
-          "This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.",
+          'Sí. Al ser los desarrolladores directos del código, podemos programar reportes específicos, módulos especiales o conectar el sistema a tus necesidades particulares.',
       },
     ]}
   />
@@ -359,33 +319,30 @@ const metadata = {
 
   <Stats
     stats={[
-      { title: 'Downloads', amount: '132K' },
-      { title: 'Stars', amount: '24.8K' },
-      { title: 'Forks', amount: '10.3K' },
-      { title: 'Users', amount: '48.4K' },
+      { title: 'Cobro por Licencia', amount: 'Único' },
+      { title: 'Soporte Presencial', amount: 'Hidalgo' },
+      { title: 'Compatibilidad', amount: '100%' },
+      { title: 'Rentas Mensuales', amount: '$0' },
     ]}
   />
-
-  <!-- CallToAction Widget *********** -->
 
   <CallToAction
     actions={[
       {
         variant: 'primary',
-        text: 'Get template',
-        href: 'https://github.com/arthelokyo/astrowind',
+        text: 'Cotizar mi Sistema por WhatsApp',
+        href: 'https://wa.me/527298619743',
         target: '_blank',
-        icon: 'tabler:download',
+        icon: 'tabler:brand-whatsapp',
       },
     ]}
   >
     <Fragment slot="title">
-      Astro&nbsp;+&nbsp;<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Tailwind CSS</span>
+      Toma el control absoluto de tu negocio hoy mismo
     </Fragment>
 
     <Fragment slot="subtitle">
-      Be very surprised by these huge fake numbers you are seeing on this page. <br class="hidden md:inline" />Don't
-      waste more time! :P
+      No dejes que el desorden en las cuentas, la fuga de inventario o los procesos lentos sigan frenando tus ganancias. <br class="hidden md:inline" />Escríbenos y platiquemos sobre la solución exacta que tu empresa necesita.
     </Fragment>
   </CallToAction>
 </Layout>
