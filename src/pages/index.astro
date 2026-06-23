@@ -11,8 +11,9 @@ import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
+// <-- AQUÍ CONFIGURÉ EL TEXTO EXACTO DE TU PESTAÑA
 const metadata = {
-  title: 'AstroWind — Free template for creating websites with Astro + Tailwind CSS',
+  title: 'VJC S.A. de C.V.',
   ignoreTitleTemplate: true,
 };
 ---
@@ -44,6 +45,7 @@ const metadata = {
   <!-- Note Widget ******************* -->
 
   <Note title="El sello VJC:" description="No rentas el software, lo adquieres. Soluciones de uso rudo creadas por desarrolladores de la región." />
+  
   <!-- Features Widget *************** -->
 
   <Features
@@ -54,64 +56,159 @@ const metadata = {
     items={[
       {
         title: 'POS: Abarrotes y Retail',
-        description:
-          'Soporta miles de productos. Escaneo ultrarrápido por código de barras, control de stock, alertas de inventario bajo y corte de caja a prueba de robos.',
+        description: 'Soporta miles de productos. Escaneo ultrarrápido por código de barras, control de stock y corte de caja.',
         icon: 'tabler:shopping-cart',
       },
       {
         title: 'POS: Restaurantes y Bares',
-        description:
-          'Control de mesas abiertas, comandas impresas directo en cocina/barra, división de cuentas, gestión de propinas y merma de ingredientes.',
+        description: 'Control de mesas abiertas, comandas impresas directo en cocina/barra y división de cuentas.',
         icon: 'tabler:coffee',
       },
       {
         title: 'POS: Barberías y Estéticas',
-        description:
-          'Registro de servicios, agenda de citas, base de datos de clientes frecuentes y cálculo automático de comisiones por barbero o estilista.',
+        description: 'Registro de servicios, agenda de citas, clientes frecuentes y cálculo de comisiones.',
         icon: 'tabler:scissors',
       },
       {
         title: 'Sistema GYM (Acceso Biométrico)',
-        description:
-          'Control de socios mediante huella digital o reconocimiento facial. Alertas de pago, bloqueo de morosos e historial de asistencias.',
+        description: 'Control de socios mediante huella digital o rostro. Alertas de pago y bloqueo de morosos.',
         icon: 'tabler:fingerprint',
       },
       {
         title: 'Fábrica de Software a la Medida',
-        description:
-          '¿Tu empresa tiene un proceso administrativo complejo? Diseñamos bases de datos, software a medida y automatizaciones desde cero.',
+        description: 'Diseñamos bases de datos, software a medida y automatizaciones desde cero.',
         icon: 'tabler:code',
       },
       {
         title: 'Licencia Vitalicia + Soporte Local',
-        description:
-          'Sin pagar mensualidades forzosas. Vamos a tu local en Sahagún y todo Hidalgo a instalar el sistema y capacitar a tu personal presencialmente.',
+        description: 'Sin pagar mensualidades. Vamos a tu local en Sahagún y todo Hidalgo a instalarlo.',
         icon: 'tabler:shield-check',
       },
     ]}
   />
 
-  <!-- Content Widget **************** -->
-
+  <!-- ==================== SISTEMA 1: ABARROTES ==================== -->
   <Content
-    isReversed
-    tagline="Control de Accesos Inteligente"
-    title="Sistema GYM: Automatización y Seguridad Biométrica"
+    id="abarrotes"
+    isAfterContent
+    tagline="Punto de Venta Mostrador"
+    title="POS Abarrotes y Retail: Cobro Ultrarrápido"
     items={[
       {
-        title: 'Acceso por Huella o Rostro',
-        description:
-          'Integración nativa con lectores biométricos y reconocimiento facial para validar la entrada de socios en menos de un segundo.',
+        title: 'Escaneo Continuo sin Pausas',
+        description: 'Compatible con cualquier lector de código de barras. Pasa los productos a máxima velocidad para que la fila de tu mostrador no se detenga.',
       },
       {
-        title: 'Bloqueo Automático de Morosos',
-        description:
-          'El sistema detecta instantáneamente si la membresía de un usuario ha vencido, denegando el paso en el acceso físico de forma automatizada.',
+        title: 'Alertas de Inventario Crítico',
+        description: 'El sistema te notifica automáticamente cuando un producto está a punto de agotarse para que resurtas a tiempo y no pierdas ventas.',
       },
       {
-        title: 'Métricas e Historial de Asistencias',
-        description:
-          'Genera reportes detallados y gráficas de flujo de usuarios para conocer las horas pico de tu club y optimizar tus entrenadores.',
+        title: 'Corte de Caja Blindado',
+        description: 'Desglosa ingresos en efectivo, tarjeta y transferencias. Registra entradas/salidas de dinero y detecta faltantes al centavo.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1578916171728-46686eac8d58?q=80&w=1000&auto=format&fit=crop',
+      alt: 'Punto de venta para Mini supers y Abarrotes',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Diseñado para el tráfico pesado</h3>
+      Olvídate de las cuentas a mano y el robo hormiga. Administra miles de productos con sus márgenes de ganancia exactos.
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- ==================== SISTEMA 2: RESTAURANTES ==================== -->
+  <Content
+    id="restaurantes"
+    isReversed
+    isAfterContent
+    tagline="Gastronomía y Hostelería"
+    title="POS Restaurantes: De la Mesa a la Cocina"
+    items={[
+      {
+        title: 'Comandas Impresas en Cocina o Barra',
+        description: 'Al capturar el pedido en el mostrador, el ticket sale de forma instantánea en la zona de preparación para agilizar a tus chefs.',
+      },
+      {
+        title: 'Mapa de Mesas en Tiempo Real',
+        description: 'Controla visualmente qué mesas están libres, cuáles están esperando su orden y cuánto tiempo llevan consumiendo.',
+      },
+      {
+        title: 'Cuentas Divididas y Propinas',
+        description: 'Separa la cuenta por persona o por platillo en un solo clic, calculando los porcentajes de propina de forma automática.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=1000&auto=format&fit=crop',
+      alt: 'Punto de venta para Restaurantes, Cafeterías y Bares',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Máxima coordinación con tus meseros</h3>
+      Elimina los errores de captura en los pedidos y ten un control estricto de los insumos que salen de tu cocina.
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- ==================== SISTEMA 3: BARBERÍAS ==================== -->
+  <Content
+    id="barberias"
+    isAfterContent
+    tagline="Barberías y Salones de Belleza"
+    title="POS Barberías: Comisiones y Agenda VIP"
+    items={[
+      {
+        title: 'Cálculo de Comisiones Exacto',
+        description: 'Asigna el porcentaje de ganancia de cada barbero o estilista. El software calcula su pago del día o la semana automáticamente.',
+      },
+      {
+        title: 'Base de Datos de Clientes Frecuentes',
+        description: 'Guarda el perfil de cada cliente con su estilo de corte, barba o tinte favorito para ofrecerle una experiencia de lujo.',
+      },
+      {
+        title: 'Control de Vitrina y Productos',
+        description: 'Administra en la misma caja la venta de insumos como ceras, geles, tónicos, minoxidil y tratamientos capilares.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1503951914875-452162b0f3f1?q=80&w=1000&auto=format&fit=crop',
+      alt: 'Punto de venta para Barberías y Estéticas',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Profesionaliza tu Barber Shop</h3>
+      Proyecta absoluta seriedad en tu mostrador y ten cuentas claras y transparentes con tu equipo de trabajo.
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- ==================== SISTEMA 4: GIMNASIOS ==================== -->
+  <Content
+    id="gym"
+    isReversed
+    isAfterContent
+    tagline="Control de Accesos Inteligente"
+    title="Sistema GYM: Seguridad Biométrica"
+    items={[
+      {
+        title: 'Acceso por Huella Digital o Rostro',
+        description: 'Integración de uso rudo con torniquetes y lectores biométricos para validar la entrada de tus socios en una fracción de segundo.',
+      },
+      {
+        title: 'Bloqueo Inmediato de Morosos',
+        description: 'El sistema detecta al instante si la mensualidad de un socio ha vencido, cerrándole el paso en la puerta automáticamente.',
+      },
+      {
+        title: 'Gráficas de Asistencia y Horas Pico',
+        description: 'Mide el flujo de usuarios por horario para saber en qué momentos necesitas más personal o entrenadores en piso.',
       },
     ]}
     image={{
@@ -120,75 +217,9 @@ const metadata = {
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Moderniza la administración de tu club</h3>
-      Elimina por completo las credenciales impresas falsificables y el acceso no autorizado con tecnología de validación de identidad en tiempo real.
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Protege los ingresos de tu Club</h3>
+      Ponle fin a las credenciales prestadas y asegura que toda persona que entre a entrenar tenga su membresía pagada.
     </Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-
-  <!-- Content Widget **************** -->
-
-  <Content
-    isAfterContent
-    items={[
-      {
-        title: 'Hardware 100% Compatible',
-        description: `Conecta lectores de código de barras, impresoras térmicas de tickets, cajones de dinero automáticos y básculas electrónicas de forma totalmente nativa.`,
-      },
-      {
-        title: 'Reportes de Ventas y Productos Estrella',
-        description:
-          'Monitorea tus márgenes de ganancia exactos, analiza cuáles son tus productos más vendidos y detecta fugas de inventario al instante.',
-      },
-      {
-        title: 'Usuarios, Roles y Permisos Seguros',
-        description:
-          'Protege tu información administrativa creando perfiles independientes para cajeros, empleados y supervisores con restricciones de cancelaciones.',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1556742044-3c52d6e88c62?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Punto de Venta comercial en mostrador',
-    }}
-  >
-    <Fragment slot="content">Tecnología de uso rudo para el comercio local</Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-
-  <!-- Content Widget **************** -->
-
-  <Content
-    isReversed
-    isAfterContent
-    items={[
-      {
-        title: 'Desarrollo a la Medida de tus Procesos',
-        description:
-          'No adaptes tu empresa a un programa genérico; nosotros construimos la base de datos y la interfaz exactamente como tu operación lo requiere.',
-      },
-      {
-        title: 'Automatización de Tareas Repetitivas',
-        description:
-          'Eliminamos cuellos de botella administrativos conectando sucursales, generando reportes financieros en un clic y optimizando flujos de trabajo.',
-      },
-      {
-        title: 'Tecnología Moderna, Segura y Escalable',
-        description:
-          'Desarrollamos con lenguajes de última generación. Tu infraestructura estará preparada para crecer y soportar grandes volúmenes de información.',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Código de programación y desarrollo de software',
-    }}
-  >
-    <Fragment slot="content">Fábrica de Software y Automatización</Fragment>
 
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
@@ -198,24 +229,22 @@ const metadata = {
   <!-- Steps Widget ****************** -->
 
   <Steps
-    title="Tu nuevo sistema implementado y operando en 3 pasos simples:"
+    id="steps"
+    title="Instalación y Configuración del Sistema"
     items={[
       {
         title: 'Paso 1: <span class="font-medium">Solicita tu Cotización o Demo</span>',
-        description:
-          'Contáctanos vía WhatsApp. Platicamos sobre las necesidades operativas de tu negocio y te mostramos el software funcionando en tiempo real.',
+        description: 'Contáctanos vía WhatsApp. Platicamos sobre las necesidades operativas de tu negocio y te mostramos el software funcionando en tiempo real.',
         icon: 'tabler:calendar',
       },
       {
         title: 'Paso 2: <span class="font-medium">Instalación Local y Hardware</span>',
-        description:
-          'Acudimos presencialmente a tu establecimiento en Ciudad Sahagún o cualquier municipio de Hidalgo para instalar el sistema y configurar tus periféricos.',
+        description: 'Acudimos presencialmente a tu establecimiento en Ciudad Sahagún o cualquier municipio de Hidalgo para instalar el sistema y configurar tus periféricos.',
         icon: 'tabler:settings',
       },
       {
         title: 'Paso 3: <span class="font-medium">Capacitación Exprés</span>',
-        description:
-          'Entrenamos a tus cajeros, recepcionistas o administradores en menos de 45 minutos. La interfaz es tan intuitiva que la dominarán el mismo día.',
+        description: 'Entrenamos a tus cajeros, recepcionistas o administradores en menos de 45 minutos. La interfaz es tan intuitiva que la dominarán el mismo día.',
         icon: 'tabler:users',
       },
       {
@@ -273,10 +302,10 @@ const metadata = {
     </Fragment>
   </Features2>
 
-
   <!-- FAQs Widget ******************* -->
 
   <FAQs
+    id="faqs"
     title="Preguntas Frecuentes"
     subtitle="Resolvemos las dudas más comunes de los dueños de negocios en Hidalgo"
     tagline="Dudas Resueltas"
@@ -284,33 +313,27 @@ const metadata = {
     items={[
       {
         title: '¿Tengo que pagar una renta mensual o anual por el software?',
-        description:
-          '¡No! A diferencia de otros sistemas que te amarran a una mensualidad de por vida, en VJC realizas un pago único por tu licencia y el software es tuyo para siempre.',
+        description: '¡No! A diferencia de otros sistemas que te amarran a una mensualidad de por vida, en VJC realizas un pago único por tu licencia y el software es tuyo para siempre.',
       },
       {
         title: '¿Qué pasa si cambio de computadora o se daña mi equipo?',
-        description:
-          'Tu inversión está protegida. Si renuevas tu mostrador o tu máquina sufre un percance, nosotros nos encargamos de respaldar tu información y reactivar tu licencia en el nuevo equipo.',
+        description: 'Tu inversión está protegida. Si renuevas tu mostrador o tu máquina sufre un percance, nosotros nos encargamos de respaldar tu información y reactivar tu licencia en el nuevo equipo.',
       },
       {
         title: '¿Qué computadora o laptop necesito para que funcione?',
-        description:
-          'Nuestros sistemas están optimizados para ser sumamente ligeros. Funcionan de forma fluida en cualquier equipo con Windows (10 u 11) que ya tengas a la mano en tu negocio.',
+        description: 'Nuestros sistemas están optimizados para ser sumamente ligeros. Funcionan de forma fluida en cualquier equipo con Windows (10 u 11) que ya tengas a la mano en tu negocio.',
       },
       {
         title: '¿Ofrecen soporte técnico si tengo algún problema?',
-        description:
-          'Sí, contamos con soporte directo vía WhatsApp y asistencia presencial en Ciudad Sahagún y municipios cercanos. Si requieres apoyo, hablas directamente con los ingenieros que lo desarrollaron.',
+        description: 'Sí, contamos con soporte directo vía WhatsApp y asistencia presencial en Ciudad Sahagún y municipios cercanos. Si requieres apoyo, hablas directamente con los ingenieros que lo desarrollaron.',
       },
       {
         title: '¿Puedo importar mi lista de precios y productos desde Excel?',
-        description:
-          '¡Claro! Para que no tengas que capturar tu inventario a mano uno por uno, podemos hacer una carga masiva de todos tus productos, códigos de barras y existencias desde una hoja de cálculo.',
+        description: '¡Claro! Para que no tengas que capturar tu inventario a mano uno por uno, podemos hacer una carga masiva de todos tus productos, códigos de barras y existencias desde una hoja de cálculo.',
       },
       {
         title: '¿Pueden hacerle modificaciones a la medida de mi empresa?',
-        description:
-          'Sí. Al ser los desarrolladores directos del código, podemos programar reportes específicos, módulos especiales o conectar el sistema a tus necesidades particulares.',
+        description: 'Sí. Al ser los desarrolladores directos del código, podemos programar reportes específicos, módulos especiales o conectar el sistema a tus necesidades particulares.',
       },
     ]}
   />
